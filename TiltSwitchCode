@@ -1,0 +1,37 @@
+const int tiltPin = 2;  //Goes to S on the tilt switch
+const int LightPin = 3; //Goes to L on tilt switch
+//Positive goes to 5v
+//Negative goes to ground
+int sensorState = 0;    
+
+void setup() {
+
+  Serial.begin(9600);
+
+  pinMode(tiltPin, INPUT);
+pinMode(LightPin,OUTPUT);
+}
+
+void loop() {
+  // Read the tilt switch state
+  sensorState = digitalRead(tiltPin);
+
+  // Print the sensor state to the Serial Monitor
+  Serial.print("Tilt switch state: ");
+  if (sensorState == LOW) {
+    Serial.println("Tilted (LOW)"); 
+    digitalWrite(LightPin, HIGH);
+    //setPump(0, HIGH, LOW, 1,0); //FOR PUMP
+//setComponent(1,FAN_PIN, 0); //FOR FAN
+//setComponent(1, EXTRACTOR_PIN, 0); //FOR EXTRACTOR
+//disablePH() //FOR PH 
+//disableEC() //FOR EC
+//togglePin(LED_PIN, HIGH); //FOR LIGHT
+  } else {
+    Serial.println("Not Tilted (HIGH)"); 
+
+    digitalWrite(LightPin, LOW);
+  }
+
+  delay(1000); 
+}
