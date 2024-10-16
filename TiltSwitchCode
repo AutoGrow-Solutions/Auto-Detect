@@ -1,3 +1,4 @@
+  #include <avr/sleep.h>
 const int tiltPin = 2;  //Goes to S on the tilt switch
 const int LightPin = 3; //Goes to L on tilt switch
 //Positive goes to 5v
@@ -8,8 +9,12 @@ void setup() {
 
   Serial.begin(9600);
 
+  
   pinMode(tiltPin, INPUT);
 pinMode(LightPin,OUTPUT);
+ set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  sleep_enable();
+
 }
 
 void loop() {
@@ -20,18 +25,11 @@ void loop() {
   Serial.print("Tilt switch state: ");
   if (sensorState == LOW) {
     Serial.println("Tilted (LOW)"); 
+
     digitalWrite(LightPin, HIGH);
-    //setPump(0, HIGH, LOW, 1,0); //FOR PUMP
-//setComponent(1,FAN_PIN, 0); //FOR FAN
-//setComponent(1, EXTRACTOR_PIN, 0); //FOR EXTRACTOR
-//disablePH() //FOR PH 
-//disableEC() //FOR EC
-//togglePin(LED_PIN, HIGH); //FOR LIGHT
-  } else {
-    Serial.println("Not Tilted (HIGH)"); 
+    sleep_cpu();
+  } 
 
-    digitalWrite(LightPin, LOW);
-  }
-
-  delay(1000); 
+  delay(1000); // Add a small delay to avoid spamming the monitor
 }
+
