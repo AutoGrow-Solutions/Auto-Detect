@@ -35,6 +35,7 @@ Welcome to **Auto-Detect**, an environmental threat detection component develope
 
 ## Safeguard Your Hydroponic System with Auto-Detect
 Auto-Detect is a game-changer for South African farmers, especially those using hydroponics in tough conditions. By harnessing IoT technology, it detects and responds to environmental threats like storms and leaks, protecting plants and equipment. This tool empowers farmers to protect their crops, save resources, and reduce risk, making it easier for small-scale operations to thrive sustainably. With Auto-Detect’s real-time alerts and automatic shutdowns, farmers can focus on growth while we handle the safety.
+
 ---
 
 ## Our Hydroponics Tent: Denzyl
