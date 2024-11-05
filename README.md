@@ -1,6 +1,8 @@
+[image](https://github.com/user-attachments/assets/121b98a1-edfd-4a90-ac90-086a6ac3f18d)
 # Auto-Detect 
 ## Environmental Threat Detection for Hydroponics
 Welcome to **Auto-Detect**, an environmental threat detection component developed by Team AutoGrow. Auto-Detect integrates with the hydroponic tent, Denzyl, allowing farmers to monitor and respond to **extreme environmental conditions**, protecting your plants and equipment from potential hazards.
+
 
 ---
 
